@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+    <display-name>Bookmanagesystem</display-name>
+    <welcome-file-list>
+        <welcome-file>index1.html</welcome-file>
+        <welcome-file>index1.htm</welcome-file>
+        <welcome-file>index1.jsp</welcome-file>
+        <welcome-file>default.html</welcome-file>
+        <welcome-file>default.htm</welcome-file>
+        <welcome-file>default.jsp</welcome-file>
+    </welcome-file-list>
+    <servlet>
+        <servlet-name>addbook</servlet-name>
+        <servlet-class>servlet.Addbookservlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>addbook</servlet-name>
+        <url-pattern>/Addbookservlet.do</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>returnbook</servlet-name>
+        <servlet-class>servlet.returnbookservlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>returnbook</servlet-name>
+        <url-pattern>/returnbookservlet.do</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>iddeletebook</servlet-name>
+        <servlet-class>servlet.iddeletebookservlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>iddeletebook</servlet-name>
+        <url-pattern>/iddeletebookservlet.do</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>namedeletebook</servlet-name>
+        <servlet-class>servlet.namedeleteservlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>namedeletebook</servlet-name>
+        <url-pattern>/namedeleteservlet.do</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>borrowbook</servlet-name>
+        <servlet-class>servlet.borrowbookservlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>borrowbook</servlet-name>
+        <url-pattern>/borrowbookservlet.do</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>findbook</servlet-name>
+        <servlet-class>servlet.findservlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>findbook</servlet-name>
+        <url-pattern>/findbookservlet.do</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>clearbook</servlet-name>
+        <servlet-class>servlet.clearbookservlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>clearbook</servlet-name>
+        <url-pattern>/clearbookservlet.do</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>idchangebook</servlet-name>
+        <servlet-class>servlet.idchangebookservlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>idchangebook</servlet-name>
+        <url-pattern>/idchangebook.do</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>namechangebook</servlet-name>
+        <servlet-class>servlet.namechangebookservlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>namechangebook</servlet-name>
+        <url-pattern>/namechangebookservlet.do</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>showbook</servlet-name>
+        <servlet-class>servlet.showbookservlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>showbook</servlet-name>
+        <url-pattern>/showbookservlet.do</url-pattern>
+    </servlet-mapping>
+
+
+
+
+
+</web-app>
