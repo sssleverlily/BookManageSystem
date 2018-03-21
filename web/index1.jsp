@@ -16,6 +16,7 @@
         h1 {color:pink}
         h2 {text-align: center}
         h2 {color:pink}
+        h5 {text-align: right}
         ul
         {
             float:left;
@@ -40,7 +41,7 @@
 </head>
 <h2>欢迎来到机智曾曾图书管理系统~</h2>
 <body>
-
+<form>
 <ul><p class="italic" >
 
     <li><a href="addbook.jsp">增加图书<br></a></li>
@@ -54,6 +55,9 @@
     <li><a href="LoginOut">退出登录<br></a></li>
 </p>
 </ul>
+</form>
+  <div>
+  </div>
 </body>
 
 

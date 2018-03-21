@@ -23,19 +23,17 @@ public class showbookservlet extends HttpServlet {
         response.setContentType("text/html");
         request.setCharacterEncoding("UTF-8");
         Book book=new Book();
-        String sql;
         Operater operater=new Operater();
        // BooksDao bd=new BooksDao();
         //进行数据库的链接
         Connection con= Loading.getConnection();
         try{
             Statement st = con.createStatement();
-
+            operater.printAllbook();
             ResultSet rs = st.executeQuery("select id,bookname,author,price from book");//存放数据库中的数据
             ResultSetMetaData rm =rs.getMetaData();//获取数据库中字段的名称、字段的值和属性
            // List<Map<String, Object>> list = new ArrayList();//存放数据库中的数据
-            System.out.println(rs);
-            Book book1 =new Book();
+//            System.out.println(rs);
             String bookname=request.getParameter("bookname");
             String author =request.getParameter("author");
             float price=Float.parseFloat(request.getParameter("price"));
@@ -47,13 +45,17 @@ public class showbookservlet extends HttpServlet {
 //                booklist.add(rs.getString("bookname"));
 //                booklist.add(rs.getString("author"));
 //                booklist.add(rs.getFloat("price"));
-                book1.getBookname();
-                book1.getAuthor();
-                book1.getPrice();
-                book1.getId();
+                booklist.add(rs.getInt("id"));
+                booklist.add(rs.getString("bookname"));
+                booklist.add(rs.getString("author"));
+                booklist.add(rs.getFloat("price"));
+//                book.getBookname();
+//                book.getAuthor();
+//                book.getPrice();
+//                book.getId();
 
                     }
-            request.getSession().setAttribute("showbook",book1);
+            request.getSession().setAttribute("showbook",book);
             //将数据传进去
             request.getRequestDispatcher("/remainderbook.jsp").forward(request,response);
 //            while (rs.next()) {//一个遍历数据中的数据，直到字段对应的值为null为止
